@@ -11,7 +11,7 @@ class WeatherAlertsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //test
+        
     }
     
 }
