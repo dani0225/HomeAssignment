@@ -26,7 +26,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEy-3J-8Tl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="11"/>
+            <point key="canvasLocation" x="-118.32061068702289" y="10.563380281690142"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="s1W-RS-qYW">
@@ -35,14 +35,41 @@
                     <view key="view" contentMode="scaleToFill" id="NZh-4Y-3l7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="D6U-vg-Pkk">
+                                <rect key="frame" x="0.0" y="103" width="393" height="666"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TlA-hC-OZg"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="TlA-hC-OZg" firstAttribute="trailing" secondItem="D6U-vg-Pkk" secondAttribute="trailing" id="04m-IL-cfG"/>
+                            <constraint firstItem="TlA-hC-OZg" firstAttribute="bottom" secondItem="D6U-vg-Pkk" secondAttribute="bottom" id="C6k-Ri-tuy"/>
+                            <constraint firstItem="D6U-vg-Pkk" firstAttribute="leading" secondItem="TlA-hC-OZg" secondAttribute="leading" id="Hhn-94-qLS"/>
+                            <constraint firstItem="D6U-vg-Pkk" firstAttribute="top" secondItem="TlA-hC-OZg" secondAttribute="top" id="heV-UB-QwB"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="hPS-Xb-Fvt"/>
+                    <navigationItem key="navigationItem" id="19u-zi-vSw"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7g-IL-d8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1044" y="-598"/>
+            <point key="canvasLocation" x="-118.32061068702289" y="-598.59154929577471"/>
+        </scene>
+        <!--Contact Details View Controller-->
+        <scene sceneID="tae-ba-fsW">
+            <objects>
+                <viewController storyboardIdentifier="ContactDetailsViewController" id="GZT-N8-ZMZ" customClass="ContactDetailsViewController" customModule="TakeHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zhd-q4-q6X">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="ZdG-7o-vFW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FNb-wf-vdh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="785" y="-591"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xhh-FF-3Or">
@@ -54,13 +81,32 @@
                         <color key="backgroundColor" systemColor="systemGray5Color"/>
                     </tabBar>
                     <connections>
-                        <segue destination="DTs-cA-mp3" kind="relationship" relationship="viewControllers" id="YUd-Uh-soH"/>
+                        <segue destination="ZFz-bD-87I" kind="relationship" relationship="viewControllers" id="YUd-Uh-soH"/>
                         <segue destination="N2c-iw-KHy" kind="relationship" relationship="viewControllers" id="Yax-f0-wgo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wF-9R-fHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1947" y="-294"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="5gQ-yx-2OU">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ZFz-bD-87I" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="contacts" id="hPS-Xb-Fvt"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rX3-Vk-WNM">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="DTs-cA-mp3" kind="relationship" relationship="rootViewController" id="rVX-ej-GeC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BAO-6k-fCT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1045.0381679389313" y="-598.59154929577471"/>
         </scene>
     </scenes>
     <resources>
