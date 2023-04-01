@@ -20,6 +20,7 @@ class ContactsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Duplicates"
         configureTableView()
         let viewModel = contactsModel.createViewModel()
         bindModel()
