@@ -10,23 +10,33 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Weather Alerts-->
+        <!--Weather Alerts View Controller-->
         <scene sceneID="oMo-e0-is5">
             <objects>
                 <viewController id="N2c-iw-KHy" customClass="WeatherAlertsViewController" customModule="TakeHomeAssignment" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="cmY-oV-rHG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="VCh-FD-sT0">
+                                <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                                <color key="color" systemColor="systemYellowColor"/>
+                            </activityIndicatorView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="RRb-3f-SpN"/>
-                        <color key="backgroundColor" systemColor="systemBrownColor"/>
+                        <constraints>
+                            <constraint firstItem="VCh-FD-sT0" firstAttribute="centerY" secondItem="cmY-oV-rHG" secondAttribute="centerY" id="Lh7-Vu-Zm0"/>
+                            <constraint firstItem="VCh-FD-sT0" firstAttribute="centerX" secondItem="cmY-oV-rHG" secondAttribute="centerX" id="l5a-kS-qse"/>
+                        </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Weather Alerts" id="q6N-9y-1iz">
-                        <imageReference key="image" image="cloud.sun.bolt.fill" catalog="system" symbolScale="large" renderingMode="original"/>
-                    </tabBarItem>
+                    <navigationItem key="navigationItem" id="k18-lh-mVS"/>
+                    <connections>
+                        <outlet property="activityIndicator" destination="VCh-FD-sT0" id="PQg-PF-tUR"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sEy-3J-8Tl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118.32061068702289" y="10.563380281690142"/>
+            <point key="canvasLocation" x="808.39694656488541" y="10.563380281690142"/>
         </scene>
         <!--Contacts View Controller-->
         <scene sceneID="s1W-RS-qYW">
@@ -54,7 +64,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l7g-IL-d8K" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-118.32061068702289" y="-598.59154929577471"/>
+            <point key="canvasLocation" x="808.39694656488541" y="-598.59154929577471"/>
         </scene>
         <!--Contact Details View Controller-->
         <scene sceneID="tae-ba-fsW">
@@ -69,7 +79,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FNb-wf-vdh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="785" y="-591"/>
+            <point key="canvasLocation" x="1710.6870229007634" y="-591.54929577464793"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="xhh-FF-3Or">
@@ -82,7 +92,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="ZFz-bD-87I" kind="relationship" relationship="viewControllers" id="YUd-Uh-soH"/>
-                        <segue destination="N2c-iw-KHy" kind="relationship" relationship="viewControllers" id="Yax-f0-wgo"/>
+                        <segue destination="qqk-Tj-EkV" kind="relationship" relationship="viewControllers" id="Yax-f0-wgo"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8wF-9R-fHk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -108,17 +118,38 @@
             </objects>
             <point key="canvasLocation" x="-1045.0381679389313" y="-598.59154929577471"/>
         </scene>
+        <!--Weather Alerts-->
+        <scene sceneID="lRf-XV-NVW">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qqk-Tj-EkV" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Weather Alerts" id="q6N-9y-1iz">
+                        <imageReference key="image" image="cloud.sun.bolt.fill" catalog="system" symbolScale="large" renderingMode="original"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="biZ-0h-9CB">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="N2c-iw-KHy" kind="relationship" relationship="rootViewController" id="IhN-21-YJA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3SH-Fx-xlA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-118.32061068702289" y="10.563380281690142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="cloud.sun.bolt.fill" catalog="system" width="124" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray5Color">
             <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

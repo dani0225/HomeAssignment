@@ -31,6 +31,9 @@
 		5FF307B429D9610A0030F869 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B329D9610A0030F869 /* WeatherService.swift */; };
 		5FF307B729D965490030F869 /* RequestWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B629D965490030F869 /* RequestWeather.swift */; };
 		5FF307BA29DACF8C0030F869 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */; };
+		5FF307BC29DAE4D10030F869 /* detailAlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307BB29DAE4D10030F869 /* detailAlertsViewModel.swift */; };
+		5FF307BF29DAE5530030F869 /* DetailAlertsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307BD29DAE5530030F869 /* DetailAlertsViewController.swift */; };
+		5FF307C029DAE5530030F869 /* DetailAlertsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FF307BE29DAE5530030F869 /* DetailAlertsViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		5FF307B329D9610A0030F869 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
 		5FF307B629D965490030F869 /* RequestWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestWeather.swift; sourceTree = "<group>"; };
 		5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
+		5FF307BB29DAE4D10030F869 /* detailAlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = detailAlertsViewModel.swift; sourceTree = "<group>"; };
+		5FF307BD29DAE5530030F869 /* DetailAlertsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailAlertsViewController.swift; sourceTree = "<group>"; };
+		5FF307BE29DAE5530030F869 /* DetailAlertsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailAlertsViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				5F8F950D29D437610054F76A /* WeatherAlertsViewController.swift */,
+				5FF307BD29DAE5530030F869 /* DetailAlertsViewController.swift */,
+				5FF307BE29DAE5530030F869 /* DetailAlertsViewController.xib */,
 			);
 			path = WeatherController;
 			sourceTree = "<group>";
@@ -236,6 +244,7 @@
 			isa = PBXGroup;
 			children = (
 				5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */,
+				5FF307BB29DAE4D10030F869 /* detailAlertsViewModel.swift */,
 			);
 			path = WeatherALertsViewModel;
 			sourceTree = "<group>";
@@ -311,6 +320,7 @@
 				5FF307B129D898160030F869 /* WeatherAlertsTableViewCell.xib in Resources */,
 				5FF307A929D735E30030F869 /* DetailContactTableViewCell.xib in Resources */,
 				5F8F950229D42D3D0054F76A /* LaunchScreen.storyboard in Resources */,
+				5FF307C029DAE5530030F869 /* DetailAlertsViewController.xib in Resources */,
 				5F8F94FF29D42D3D0054F76A /* Assets.xcassets in Resources */,
 				5F8F94FD29D42D3B0054F76A /* Main.storyboard in Resources */,
 				5F1B3C9E29D6D23D002178D0 /* ContactsTableViewCell.xib in Resources */,
@@ -328,6 +338,7 @@
 				5F05BF7329D56FEA0019FC50 /* ContactsModel.swift in Sources */,
 				5FF307BA29DACF8C0030F869 /* AlertsViewModel.swift in Sources */,
 				5F8F94FA29D42D3B0054F76A /* ContactsViewController.swift in Sources */,
+				5FF307BF29DAE5530030F869 /* DetailAlertsViewController.swift in Sources */,
 				5F05BF7529D571BC0019FC50 /* Utility.swift in Sources */,
 				5FF307B029D898160030F869 /* WeatherAlertsTableViewCell.swift in Sources */,
 				5F8F94F629D42D3B0054F76A /* AppDelegate.swift in Sources */,
@@ -340,6 +351,7 @@
 				5FF307AB29D8936A0030F869 /* WeatherAlertsModel.swift in Sources */,
 				5FF307A829D735E30030F869 /* DetailContactTableViewCell.swift in Sources */,
 				5FF307B729D965490030F869 /* RequestWeather.swift in Sources */,
+				5FF307BC29DAE4D10030F869 /* detailAlertsViewModel.swift in Sources */,
 				5F05BF7E29D601B40019FC50 /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

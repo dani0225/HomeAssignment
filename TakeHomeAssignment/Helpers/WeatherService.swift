@@ -13,8 +13,6 @@ enum CustomError: Error {
     case invalidUrl
 }
 
-
-
 protocol WeatherServiceType {
     func getWeatherAlerts() -> AnyPublisher<AlertsModel, Error>
     func getImageFromApi() -> AnyPublisher<UIImage, Error>
@@ -46,7 +44,7 @@ class WeatherService: WeatherServiceType {
         return URLSession.shared.dataTaskPublisher(for: url)
             .catch { error in
                 return Fail(error: error).eraseToAnyPublisher()
-            }.map { UIImage(data: $0.data)! }
+            }.compactMap { UIImage(data: $0.data) }
             .eraseToAnyPublisher()
     }
     
@@ -70,7 +68,6 @@ class WeatherService: WeatherServiceType {
         dispatchGroup.notify(queue: .main) {
             completion(images)
         }
-        
     }
 }
 

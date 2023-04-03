@@ -24,9 +24,9 @@ class WeatherAlertsTableViewCell: UITableViewCell {
     
     func configureCell(with model:AlertsViewModel) {
         titleLabel.text = model.alertModel.alertTitle
-        let startDateString = model.tranformDateToString(date: model.alertModel.startDate)
+        let startDateString = Utility.shared.tranformDateToString(date: model.alertModel.startDate)
         alertStartDateLabel.text = "Start Date: \(startDateString)"
-        let endDateString = model.tranformDateToString(date: model.alertModel.endDate)
+        let endDateString = Utility.shared.tranformDateToString(date: model.alertModel.endDate)
         alertEndDateLabel.text = "End Date: \(endDateString)"
         sourceLabel.text = "Source: \(model.alertModel.sourceOfAlert)"
         imageThumbnail.image = model.image

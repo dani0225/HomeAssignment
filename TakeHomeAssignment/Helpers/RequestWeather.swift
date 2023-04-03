@@ -19,8 +19,4 @@ class RequestWeather {
         self.weatherAlertsServiceType = weatherAlertsServiceType
     }
     
-    
-
-    
-   
 }

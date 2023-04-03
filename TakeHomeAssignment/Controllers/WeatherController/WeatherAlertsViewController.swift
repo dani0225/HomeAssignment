@@ -14,12 +14,15 @@ class WeatherAlertsViewController: UIViewController {
     private var randomImages:[UIImage] = []
     private let requestWeather = RequestWeather()
     private var cancellables = Set<AnyCancellable>()
-    private var testIMage = UIImage()
+    @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
 
     override func viewDidLoad()  {
         super.viewDidLoad()
         configureTableView()
-        makeApiCall()
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+        populateModelFromApi()
+        self.title = "Weather Alerts"
     }
     
     
@@ -36,7 +39,7 @@ class WeatherAlertsViewController: UIViewController {
         tableView.dataSource = self
         tableView.delegate = self
     }
-    private func makeApiCall()  {
+    private func populateModelFromApi()  {
         
         requestWeather.weatherAlertsServiceType.getWeatherAlerts()
             .receive(on: DispatchQueue.main)
@@ -54,7 +57,10 @@ class WeatherAlertsViewController: UIViewController {
     private func getRandomImages(alertModel:AlertsModel) {
         requestWeather.weatherAlertsServiceType.getRandomImages(model: alertModel) { [weak self] images in
             self?.randomImages = images
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.activityIndicator.stopAnimating()
+                self?.tableView.reloadData()
+            }
         }
     }
 }
@@ -82,5 +88,16 @@ extension WeatherAlertsViewController: UITableViewDataSource {
 
 
 extension WeatherAlertsViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let model = alertsModel?.alerts[indexPath.row] else {
+            return
+        }
+        let tappedImage = randomImages[indexPath.row]
+        let detailsModel = DetailAlertsViewModel(alertsModel: model, image: tappedImage)
+        let detailsVC = DetailAlertsViewController(detailAlertViewModel: detailsModel)
+        DispatchQueue.main.async {
+            self.navigationController?.pushViewController(detailsVC, animated: true)
+        }
+    }
     
 }

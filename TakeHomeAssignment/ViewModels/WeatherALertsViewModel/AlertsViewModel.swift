@@ -14,21 +14,10 @@ class AlertsViewModel {
     
      var alertModel: WeatherAlertsModel
      var image:UIImage
-     let weatherAlertsServiceType: WeatherServiceType
-     var cancellables = Set<AnyCancellable>()
-   
 
-    init(alertModel: WeatherAlertsModel, image:UIImage, weatherAlertsServiceType: WeatherServiceType = WeatherService()) {
+    init(alertModel: WeatherAlertsModel, image:UIImage) {
         self.alertModel = alertModel
         self.image = image
-        self.weatherAlertsServiceType = weatherAlertsServiceType
-    }
-    
-    
-    func tranformDateToString(date:Date) -> String {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = .medium
-        return dateFormatter.string(from: date)
     }
     
 }
