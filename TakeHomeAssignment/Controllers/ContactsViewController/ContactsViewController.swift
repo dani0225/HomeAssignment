@@ -36,7 +36,9 @@ class ContactsViewController: UIViewController {
     }
     private func bindModel() {
         contactsModel.userViewModels.bind { [weak self] _ in
-            self?.tableView.reloadData()
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+            }
         }
     }
 }

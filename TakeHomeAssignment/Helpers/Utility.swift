@@ -23,6 +23,8 @@ enum Const {
     static let contactsDetailStoryboardId = "ContactDetailsViewController"
     static let detailsCell = "DetailContactsCell"
     static let detailsNibName = "DetailContactTableViewCell"
+    static let weatherAlertsNibName = "WeatherAlertsTableViewCell"
+    static let weatherAlertsCell = "WeatherAlertCell"
 }
 
 

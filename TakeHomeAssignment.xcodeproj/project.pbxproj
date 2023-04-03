@@ -25,6 +25,12 @@
 		5FF307A429D6F31B0030F869 /* DetailsContactViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FF307A329D6F31B0030F869 /* DetailsContactViewController.xib */; };
 		5FF307A829D735E30030F869 /* DetailContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307A629D735E30030F869 /* DetailContactTableViewCell.swift */; };
 		5FF307A929D735E30030F869 /* DetailContactTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FF307A729D735E30030F869 /* DetailContactTableViewCell.xib */; };
+		5FF307AB29D8936A0030F869 /* WeatherAlertsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307AA29D8936A0030F869 /* WeatherAlertsModel.swift */; };
+		5FF307B029D898160030F869 /* WeatherAlertsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307AE29D898160030F869 /* WeatherAlertsTableViewCell.swift */; };
+		5FF307B129D898160030F869 /* WeatherAlertsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5FF307AF29D898160030F869 /* WeatherAlertsTableViewCell.xib */; };
+		5FF307B429D9610A0030F869 /* WeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B329D9610A0030F869 /* WeatherService.swift */; };
+		5FF307B729D965490030F869 /* RequestWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B629D965490030F869 /* RequestWeather.swift */; };
+		5FF307BA29DACF8C0030F869 /* AlertsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +54,12 @@
 		5FF307A329D6F31B0030F869 /* DetailsContactViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsContactViewController.xib; sourceTree = "<group>"; };
 		5FF307A629D735E30030F869 /* DetailContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailContactTableViewCell.swift; sourceTree = "<group>"; };
 		5FF307A729D735E30030F869 /* DetailContactTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailContactTableViewCell.xib; sourceTree = "<group>"; };
+		5FF307AA29D8936A0030F869 /* WeatherAlertsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertsModel.swift; sourceTree = "<group>"; };
+		5FF307AE29D898160030F869 /* WeatherAlertsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAlertsTableViewCell.swift; sourceTree = "<group>"; };
+		5FF307AF29D898160030F869 /* WeatherAlertsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = WeatherAlertsTableViewCell.xib; sourceTree = "<group>"; };
+		5FF307B329D9610A0030F869 /* WeatherService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherService.swift; sourceTree = "<group>"; };
+		5FF307B629D965490030F869 /* RequestWeather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestWeather.swift; sourceTree = "<group>"; };
+		5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +76,7 @@
 		5F05BF7629D577630019FC50 /* CustomCells */ = {
 			isa = PBXGroup;
 			children = (
+				5FF307B229D899FD0030F869 /* WeatherAlertsCells */,
 				5F1B3C9F29D6D26E002178D0 /* ContactDetailsCell */,
 				5F52B1B729D6D1F300BF7940 /* ContactsCells */,
 			);
@@ -129,7 +142,7 @@
 				5F8F94F729D42D3B0054F76A /* SceneDelegate.swift */,
 				5F8F950C29D436F00054F76A /* Helpers */,
 				5F8F950B29D436670054F76A /* ViewModels */,
-				5F8F950A29D436360054F76A /* Model */,
+				5F8F950A29D436360054F76A /* Models */,
 				5F8F950929D4360D0054F76A /* Controllers */,
 				5F8F950F29D437A10054F76A /* Storyboard */,
 				5F8F94FE29D42D3D0054F76A /* Assets.xcassets */,
@@ -149,20 +162,20 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		5F8F950A29D436360054F76A /* Model */ = {
+		5F8F950A29D436360054F76A /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				5F05BF7229D56FEA0019FC50 /* ContactsModel.swift */,
-				5F05BF7D29D601B40019FC50 /* ObservableObject.swift */,
+				5FF307AD29D897DB0030F869 /* WeatherAlertsModels */,
+				5FF307AC29D8979D0030F869 /* ContactsModels */,
 			);
-			path = Model;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		5F8F950B29D436670054F76A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				5F05BF7B29D6016D0019FC50 /* ContactsViewModel.swift */,
-				5F1B3CA429D6E5D7002178D0 /* DetailContactsViewModel.swift */,
+				5FF307B829DACF080030F869 /* ContactsViewModels */,
+				5FF307B529D9652C0030F869 /* WeatherALertsViewModel */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -171,6 +184,8 @@
 			isa = PBXGroup;
 			children = (
 				5F05BF7429D571BC0019FC50 /* Utility.swift */,
+				5FF307B629D965490030F869 /* RequestWeather.swift */,
+				5FF307B329D9610A0030F869 /* WeatherService.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -189,6 +204,49 @@
 				5F8F950D29D437610054F76A /* WeatherAlertsViewController.swift */,
 			);
 			path = WeatherController;
+			sourceTree = "<group>";
+		};
+		5FF307AC29D8979D0030F869 /* ContactsModels */ = {
+			isa = PBXGroup;
+			children = (
+				5F05BF7229D56FEA0019FC50 /* ContactsModel.swift */,
+				5F05BF7D29D601B40019FC50 /* ObservableObject.swift */,
+			);
+			path = ContactsModels;
+			sourceTree = "<group>";
+		};
+		5FF307AD29D897DB0030F869 /* WeatherAlertsModels */ = {
+			isa = PBXGroup;
+			children = (
+				5FF307AA29D8936A0030F869 /* WeatherAlertsModel.swift */,
+			);
+			path = WeatherAlertsModels;
+			sourceTree = "<group>";
+		};
+		5FF307B229D899FD0030F869 /* WeatherAlertsCells */ = {
+			isa = PBXGroup;
+			children = (
+				5FF307AE29D898160030F869 /* WeatherAlertsTableViewCell.swift */,
+				5FF307AF29D898160030F869 /* WeatherAlertsTableViewCell.xib */,
+			);
+			path = WeatherAlertsCells;
+			sourceTree = "<group>";
+		};
+		5FF307B529D9652C0030F869 /* WeatherALertsViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5FF307B929DACF8C0030F869 /* AlertsViewModel.swift */,
+			);
+			path = WeatherALertsViewModel;
+			sourceTree = "<group>";
+		};
+		5FF307B829DACF080030F869 /* ContactsViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				5F05BF7B29D6016D0019FC50 /* ContactsViewModel.swift */,
+				5F1B3CA429D6E5D7002178D0 /* DetailContactsViewModel.swift */,
+			);
+			path = ContactsViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,6 +308,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5FF307A429D6F31B0030F869 /* DetailsContactViewController.xib in Resources */,
+				5FF307B129D898160030F869 /* WeatherAlertsTableViewCell.xib in Resources */,
 				5FF307A929D735E30030F869 /* DetailContactTableViewCell.xib in Resources */,
 				5F8F950229D42D3D0054F76A /* LaunchScreen.storyboard in Resources */,
 				5F8F94FF29D42D3D0054F76A /* Assets.xcassets in Resources */,
@@ -267,15 +326,20 @@
 			files = (
 				5F05BF7929D577A30019FC50 /* ContactsTableViewCell.swift in Sources */,
 				5F05BF7329D56FEA0019FC50 /* ContactsModel.swift in Sources */,
+				5FF307BA29DACF8C0030F869 /* AlertsViewModel.swift in Sources */,
 				5F8F94FA29D42D3B0054F76A /* ContactsViewController.swift in Sources */,
 				5F05BF7529D571BC0019FC50 /* Utility.swift in Sources */,
+				5FF307B029D898160030F869 /* WeatherAlertsTableViewCell.swift in Sources */,
 				5F8F94F629D42D3B0054F76A /* AppDelegate.swift in Sources */,
 				5F1B3CA529D6E5D7002178D0 /* DetailContactsViewModel.swift in Sources */,
 				5F1B3CA829D6ECB3002178D0 /* DetailsContactViewController.swift in Sources */,
 				5F05BF7C29D6016D0019FC50 /* ContactsViewModel.swift in Sources */,
 				5F8F950E29D437610054F76A /* WeatherAlertsViewController.swift in Sources */,
+				5FF307B429D9610A0030F869 /* WeatherService.swift in Sources */,
 				5F8F94F829D42D3B0054F76A /* SceneDelegate.swift in Sources */,
+				5FF307AB29D8936A0030F869 /* WeatherAlertsModel.swift in Sources */,
 				5FF307A829D735E30030F869 /* DetailContactTableViewCell.swift in Sources */,
+				5FF307B729D965490030F869 /* RequestWeather.swift in Sources */,
 				5F05BF7E29D601B40019FC50 /* ObservableObject.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
